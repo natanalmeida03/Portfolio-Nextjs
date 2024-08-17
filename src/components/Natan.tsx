@@ -5,7 +5,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 function Natan() {
   return (
-    <section className="h-screen bg-bk1 pt-20 justify-center">
+    <section className="h-screen bg-bk1 pt-20 justify-center" id="start">
       <div className="h-full max-w-6xl flex mx-auto">
         <div className="flex-1 p-5 my-auto h-fit ">
           <img src="/natan.jpg" alt="natan" />

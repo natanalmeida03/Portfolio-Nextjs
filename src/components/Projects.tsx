@@ -2,7 +2,7 @@ import ProjectCard from "./ProjectCard";
 
 function Projects() {
   return (
-    <section id="Projects" className="py-11 bg-bk1">
+    <section id="projects" className="pb-11 pt-20 bg-bk1">
       <div className="mx-auto max-w-6xl">
         <h1 className="font-bold text-4xl text-pk mb-10">Projetos</h1>
         <ul className="flex flex-wrap gap-10 justify-center xl:justify-between">
@@ -14,14 +14,14 @@ function Projects() {
           />
           <ProjectCard
             title="Jokenpo"
-            image="/timer.PNG"
-            link="https://github.com/NATANGOATOSO/cronometro/"
+            image="/jokenpo.PNG"
+            link="https://github.com/NATANGOATOSO/pedrapapeltesoura"
             linguagens={["HTML", "CSS", "JavaScript"]}
           />
           <ProjectCard
             title="Meu Portfólio"
-            image="/timer.PNG"
-            link="https://github.com/NATANGOATOSO/cronometro/"
+            image="/portifolio.PNG"
+            link="https://github.com/NATANGOATOSO/Portfolio-Nextjs"
             linguagens={["Typescript", "ReactJs", "NextJs", "HTML", "CSS"]}
           />
           <ProjectCard
@@ -38,14 +38,14 @@ function Projects() {
           />
           <ProjectCard
             title="Calculus"
-            image="/timer.PNG"
-            link="https://github.com/NATANGOATOSO/cronometro/"
+            image="/calculus.PNG"
+            link="https://github.com/fga-eps-mds/2024.1-CALCULUS-Frontend"
             linguagens={["ReactJs", "NextJs", "HTML", "CSS", "NestJs", "TypeScript"]}
           />
           <ProjectCard
             title="Pokedex"
-            image="/timer.PNG"
-            link="https://github.com/NATANGOATOSO/cronometro/"
+            image="/pokedex.PNG"
+            link="https://github.com/NATANGOATOSO/Pokedex"
             linguagens={["HTML", "CSS", "JavaScript"]}
           />
         </ul>

@@ -2,7 +2,7 @@ import KnowCard from "./KnowCard";
 
 function Know() {
   return (
-    <section id="Know" className="py-11 bg-bk2">
+    <section id="know" className="py-11 bg-bk2">
       <div className="mx-auto max-w-6xl">
         <h1 className="font-bold text-4xl text-pk mb-10">Conhecimentos</h1>
         <ul className="flex flex-wrap gap-10 ">
