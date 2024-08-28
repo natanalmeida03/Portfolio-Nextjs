@@ -5,7 +5,7 @@ function Know() {
     <section id="know" className="py-11 bg-bk2">
       <div className="mx-auto max-w-6xl">
         <h1 className="font-bold text-4xl text-pk mb-10">Conhecimentos</h1>
-        <ul className="flex flex-wrap gap-10 ">
+        <ul className="flex flex-wrap gap-10 justify-center md:justify-start">
           <KnowCard title="C++" image="/c-.png" />
           <KnowCard title="Javascript" image="/js.png" />
           <KnowCard title="HTML" image="/html.png" />

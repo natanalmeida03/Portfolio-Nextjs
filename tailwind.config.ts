@@ -21,6 +21,7 @@ const config: Config = {
       "bk2": "#151515",
       "pk": "#454679",
       "white": "#fff",
+      transparent: 'transparent',
     },
   },
   plugins: [],
