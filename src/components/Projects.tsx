@@ -20,7 +20,7 @@ function Projects() {
           />
           <ProjectCard
             title="Meu Portfólio"
-            image="/portifolio.PNG"
+            image="/portifolio.png"
             link="https://github.com/NATANGOATOSO/Portfolio-Nextjs"
             linguagens={["Typescript", "ReactJs", "NextJs", "HTML", "CSS"]}
           />
@@ -38,7 +38,7 @@ function Projects() {
           />
           <ProjectCard
             title="Calculus"
-            image="/calculus.PNG"
+            image="/calculus.png"
             link="https://github.com/fga-eps-mds/2024.1-CALCULUS-Frontend"
             linguagens={["ReactJs", "NextJs", "HTML", "CSS", "NestJs", "TypeScript"]}
           />
