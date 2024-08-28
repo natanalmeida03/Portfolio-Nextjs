@@ -7,6 +7,37 @@ function Projects() {
         <h1 className="font-bold text-4xl text-pk mb-10">Projetos</h1>
         <ul className="flex flex-wrap gap-10 justify-center xl:justify-between">
           <ProjectCard
+            title="Calculus"
+            image="/calculus.png"
+            link="https://github.com/fga-eps-mds/2024.1-CALCULUS-Frontend"
+            linguagens={[
+              "ReactJs",
+              "NextJs",
+              "HTML",
+              "CSS",
+              "TypeScript",
+              "TailWindCSS",
+            ]}
+          />
+          <ProjectCard
+            title="Pokedex"
+            image="/pokedex.PNG"
+            link="https://github.com/NATANGOATOSO/Pokedex"
+            linguagens={["HTML", "CSS", "JavaScript"]}
+          />
+          <ProjectCard
+            title="Pixel Art App"
+            image="/pixelartsite.png"
+            link="https://github.com/NATANGOATOSO/pixelart-app"
+            linguagens={["HTML", "CSS", "JavaScript"]}
+          />
+          <ProjectCard
+            title="Chat App"
+            image="/chatapp.png"
+            link="https://chatapp-natan.vercel.app"
+            linguagens={["ReactJs", "HTML", "CSS", "TypeScript"]}
+          />
+          <ProjectCard
             title="Cronometro Online"
             image="/timer.PNG"
             link="https://github.com/NATANGOATOSO/cronometro/"
@@ -35,18 +66,6 @@ function Projects() {
             image="/timer.PNG"
             link="https://github.com/NATANGOATOSO/cronometro/"
             linguagens={["Python"]}
-          />
-          <ProjectCard
-            title="Calculus"
-            image="/calculus.png"
-            link="https://github.com/fga-eps-mds/2024.1-CALCULUS-Frontend"
-            linguagens={["ReactJs", "NextJs", "HTML", "CSS", "NestJs", "TypeScript"]}
-          />
-          <ProjectCard
-            title="Pokedex"
-            image="/pokedex.PNG"
-            link="https://github.com/NATANGOATOSO/Pokedex"
-            linguagens={["HTML", "CSS", "JavaScript"]}
           />
         </ul>
       </div>
