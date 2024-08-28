@@ -29,19 +29,28 @@ function NavBar() {
           </li>
         </ul>
         <div className="block md:hidden pr-4">
-          <Image
-            src="/burger-bar.png"
-            alt="menu"
-            width={32}
-            height={32}
-            onClick={toggleMenu}
-          />
+          {menuOpen === true ? (
+            <Image
+              src="/close.png"
+              alt="menu"
+              width={25}
+              height={25}
+              onClick={toggleMenu}
+            />
+          ) : (
+            <Image
+              src="/burger-bar.png"
+              alt="menu"
+              width={32}
+              height={32}
+              onClick={toggleMenu}
+            />
+          )}
         </div>
       </nav>
       {menuOpen === true ? (
         <div className="fixed h-screen w-64 bg-bk1 z-10 left-0 top-0 pt-12 pl-6">
           <ul className="flex flex-1 flex-col justify-end gap-3 text-yll ">
-            <Image src="/close.png" alt="close" width={32} height={32} onClick={toggleMenu} />
             <li className="py-1 text-3xl">
               <Link href="#about">Sobre mim</Link>
             </li>
