@@ -12,10 +12,10 @@ function NavBar() {
   };
 
   return (
-    <div className="bg-bk1/50 h-16 fixed w-full">
+    <div className="bg-bk1/50 h-16 fixed w-full z-50">
       <nav className="bg-bk1/50 flex max-w-6xl mx-auto justify-between h-16 items-center backdrop-blur-sm">
         <Link href="#start">
-          <h1 className="text-4xl font-bold text-yll flex-1">natan</h1>
+          <h1 className="text-4xl font-bold text-yll flex-1 pl-4 md:pr-0">natan</h1>
         </Link>
         <ul className="hidden md:flex flex-1 justify-end gap-2 text-yll ">
           <li className="mx-5 py-1 border-b-2 border-b-transparent hover:border-b-yll active:border-b-yll">
@@ -49,8 +49,8 @@ function NavBar() {
         </div>
       </nav>
       {menuOpen === true ? (
-        <div className="fixed h-screen w-64 bg-bk1 z-10 left-0 top-0 pt-12 pl-6">
-          <ul className="flex flex-1 flex-col justify-end gap-3 text-yll ">
+        <div className="fixed h-screen w-64 bg-bk1 z-[-1] left-0 top-0 pt-14 pl-4">
+          <ul className="flex flex-1 flex-col justify-end gap-2 text-yll ">
             <li className="py-1 text-3xl">
               <Link href="#about">Sobre mim</Link>
             </li>

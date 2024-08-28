@@ -15,7 +15,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   linguagens,
 }) => {
   return (
-    <div className="max-w-80 bg-bk2 p-5 rounded-2xl flex flex-col gap-7 text-white ">
+    <div className="max-w-80 bg-bk2 p-5 rounded-2xl flex flex-col gap-7 text-white min-h-[450px] z-0">
       <h3 className="font-bold text-xl">{title}</h3>
       <img src={image} alt={title} />
       <a href={link} target="blank" className="text-lg my-8 hover:text-yll before:content-['🔗']"> Visitar Repositório</a>
