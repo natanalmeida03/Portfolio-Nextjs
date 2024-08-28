@@ -99,7 +99,7 @@ function Projects() {
           ))}
         </ul>
         <div className="lg:hidden px-4 z-[1]">
-          <Carousel responsive={responsive} ssr={false} removeArrowOnDeviceType={["tablet", "mobile"]} showDots >
+          <Carousel responsive={responsive} ssr={false} >
             {projects.map((project) => (
               <ProjectCard
                 key={project.title}
