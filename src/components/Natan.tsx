@@ -8,7 +8,7 @@ function Natan() {
     <section className="h-96 md:h-screen bg-bk1 pt-20 justify-center" id="start">
       <div className="h-full max-w-6xl flex mx-auto">
         <div className="hidden md:block flex-1 my-auto h-fit overflow-hidden rounded-lg shadow-[10px_10px_30px_#2c2c2c] ">
-          <img src="/natan2.jpg" alt="natan" />
+          <img src="/natan3.png" alt="natan" />
         </div>
         <div className="flex flex-1 flex-col justify-center pl-4 md:pr-0 text-left md:text-right h-full">
           <h1 className="text-7xl md:text-6xl text-yll font-bold">natan almeida,</h1>

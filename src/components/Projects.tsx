@@ -33,7 +33,7 @@ function Projects() {
     {
       title: "Chat App",
       image: "/chatapp.png",
-      link: "https://chatapp-natan.vercel.app",
+      link: "",
       linguagens: ["ReactJs", "HTML", "CSS", "TypeScript"],
     },
     {
@@ -57,13 +57,13 @@ function Projects() {
     {
       title: "Bloom - APP de rotinas",
       image: "/timer.PNG",
-      link: "https://github.com/NATANGOATOSO/cronometro/",
-      linguagens: ["Typescript", "React native"],
+      link: "https://github.com/cerejeiros/bloom",
+      linguagens: ["Typescript", "React native", "Supabase"],
     },
     {
       title: "Legends Brazilian",
       image: "/timer.PNG",
-      link: "https://github.com/NATANGOATOSO/cronometro/",
+      link: "https://github.com/LegendsBrazilian/LegendsBrazilian",
       linguagens: ["Python"],
     },
   ];
