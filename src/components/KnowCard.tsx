@@ -9,9 +9,9 @@ interface KnowCardProps {
 
 function KnowCard({ title, image}: KnowCardProps) {
   return (
-    <div className="bg-bk1 p-6 rounded-lg shadow-lg">
-      <h2 className="font-bold text-2xl text-white text-center mb-4">{title}</h2>
-      <img src={image} alt={title} className="w-36 h-36 mx-auto" />
+    <div className="flex gap-2 bg-bk3 px-6 py-3 rounded-lg shadow-lg items-center">
+      <img src={image} alt={title} className="w-16 h-16 mx-auto" />
+      <h2 className="font-bold text-xl text-black text-center mb-4">{title}</h2>
     </div>
   );
 }

@@ -1,11 +1,21 @@
 import './globals.css';
-import { MuseoModerno } from '@next/font/google';
+import { MuseoModerno, Poppins, Inter } from '@next/font/google';
 export const metadata = {
   title: 'natan',
   description: 'Portfolio de Natan',
 }
 
 const museoModerno = MuseoModerno({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+});
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+});
+
+const inter = Inter({
   subsets: ['latin'],
   weight: ['400', '700'],
 });

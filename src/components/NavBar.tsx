@@ -12,20 +12,29 @@ function NavBar() {
   };
 
   return (
-    <div className="bg-bk1/50 h-16 fixed w-full z-50">
-      <nav className="bg-bk1/50 flex max-w-6xl mx-auto justify-between h-16 items-center backdrop-blur-sm">
+    <div className="bg-bk3/50 h-16 fixed w-full z-50">
+      <nav className="bg-bk3/50 flex max-w-5xl mx-auto justify-between h-16 items-center backdrop-blur-sm">
         <Link href="#start">
-          <h1 className="text-4xl font-bold text-yll flex-1 pl-4 md:pr-0">natan</h1>
+          <h1 className="text-4xl font-bold text-yll flex-1 md:pr-0">natan</h1>
         </Link>
         <ul className="hidden md:flex flex-1 justify-end gap-2 text-yll ">
-          <li className="mx-5 py-1 border-b-2 border-b-transparent hover:border-b-yll active:border-b-yll">
-            <Link href="#about">Sobre mim</Link>
+          <li className="mx-5 py-1 relative group overflow-hidden">
+            <Link href="#about" className="text-yll relative z-10 font-semibold">
+              Sobre mim
+              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-yll transition-all duration-300 group-hover:w-full"></span>
+            </Link>
           </li>
-          <li className="mx-5 py-1 border-b-2 border-b-transparent hover:border-b-yll active:border-b-yll">
-            <Link href="#projects">projetos</Link>
+          <li className="mx-5 py-1 relative group overflow-hidden">
+            <Link href="#projects" className="text-yll relative z-10 font-semibold ">
+              Projetos
+              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-yll transition-all duration-300 group-hover:w-full"></span>
+            </Link>
           </li>
-          <li className="mx-5 py-1 border-b-2 border-b-transparent hover:border-b-yll active:border-b-yll">
-            <Link href="#know">conhecimentos</Link>
+          <li className="mx-5 py-1 relative group overflow-hidden">
+            <Link href="#know" className="text-yll relative z-10 font-semibold">
+              Conhecimentos
+              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-yll transition-all duration-300 group-hover:w-full"></span>
+            </Link>
           </li>
         </ul>
         <div className="block md:hidden pr-4">
@@ -49,15 +58,15 @@ function NavBar() {
         </div>
       </nav>
       {menuOpen === true ? (
-        <div className="fixed h-screen w-64 bg-bk1 z-[-1] left-0 top-0 pt-14 pl-4">
+        <div className="fixed h-screen w-64 bg-bk3 z-[-1] left-0 top-0 pt-14 pl-4">
           <ul className="flex flex-1 flex-col justify-end gap-2 text-yll ">
-            <li className="py-1 text-3xl">
+            <li className="py-1 text-3xl bold">
               <Link href="#about">Sobre mim</Link>
             </li>
-            <li className="py-1 text-3xl">
+            <li className="py-1 text-3xl bold">
               <Link href="#projects">projetos</Link>
             </li>
-            <li className="py-1 text-3xl">
+            <li className="py-1 text-3xl bold">
               <Link href="#know">conhecimentos</Link>
             </li>
           </ul>
