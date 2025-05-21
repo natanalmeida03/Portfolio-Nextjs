@@ -103,7 +103,7 @@ function Projects() {
     <section id="projects" className="pb-11 pt-20 bg-bk3">
       <div className="mx-auto max-w-5xl">
         <h1 className="font-bold text-4xl text-pk mb-10 pl-4 md:pr-0">
-          // Projetos
+          {'// projetos'}
         </h1>
         <div className="mb-6 px-4">
           {allTools.map((tool) => (
