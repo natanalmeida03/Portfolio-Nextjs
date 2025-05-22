@@ -1,8 +1,19 @@
 'use client';
 import ProjectCard from "./ProjectCard";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth < 1024);
+    }
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  return isMobile;
+}
 
 function Projects() {
   const projects = [
@@ -84,20 +95,9 @@ function Projects() {
     ? projects.filter((p) => p.linguagens.includes(selectedTool))
     : projects;
 
-  const visibleProjects = showAll ? filteredProjects : filteredProjects.slice(0, 9);
-
-  const responsive = {
-    tablet: {
-      breakpoint: { max: 768, min: 640 },
-      items: 2,
-      slidesToSlide: 1,
-    },
-    mobile: {
-      breakpoint: { max: 640, min: 0 },
-      items: 1,
-      slidesToSlide: 1,
-    },
-  };
+  const isMobile = useIsMobile();
+  const limit = isMobile ? 5 : 9;
+  const visibleProjects = showAll ? filteredProjects : filteredProjects.slice(0, limit);
 
   return (
     <section id="projects" className="pb-11 pt-20 bg-bk3">
@@ -124,7 +124,7 @@ function Projects() {
             </span>
           ))}
         </div>
-        <ul className="hidden lg:flex flex-wrap gap-5 gap-y-4">
+        <ul className="flex flex-col items-center lg:items-stretch lg:flex-row flex-wrap gap-5 gap-y-4">
           {visibleProjects.map((project) => (
             <ProjectCard
               key={project.title}
@@ -135,20 +135,7 @@ function Projects() {
             />
           ))}
         </ul>
-        <div className="lg:hidden px-4 z-[1]">
-          <Carousel responsive={responsive} ssr={false}>
-            {visibleProjects.map((project) => (
-              <ProjectCard
-                key={project.title}
-                title={project.title}
-                image={project.image}
-                link={project.link}
-                linguagens={project.linguagens}
-              />
-            ))}
-          </Carousel>
-        </div>
-        {filteredProjects.length > 9 && (
+        {filteredProjects.length > limit && (
           <div className="flex justify-center mt-6">
             <button
               className="bg-yll text-black px-4 py-2 rounded font-semibold hover:bg-yll/80 transition"
