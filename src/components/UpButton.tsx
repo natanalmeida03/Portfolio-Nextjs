@@ -18,7 +18,7 @@ function UpButton() {
     <div>
       <a
         href="#start"
-        className="fixed bottom-5 right-5 bg-yll text-white p-3 rounded-full shadow-lg hover:bg-yll/80 transition duration-300 ease-in-out"
+        className="fixed bottom-5 right-5 bg-y text-white p-3 rounded-full shadow-lg hover:bg-y/80 transition duration-300 ease-in-out"
       >
         <img src="/up-arrow-icon.png" alt="Up" width={32} height={32} className="invert filter"/>
       </a>

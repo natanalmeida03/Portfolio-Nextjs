@@ -1,11 +1,16 @@
 import './globals.css';
-import { MuseoModerno, Poppins, Inter } from '@next/font/google';
+import { MuseoModerno, Poppins, Inter, Fira_Code} from '@next/font/google';
 export const metadata = {
   title: 'natan',
   description: 'Portfolio de Natan',
 }
 
 const museoModerno = MuseoModerno({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+});
+
+const firaCode = Fira_Code({
   subsets: ['latin'],
   weight: ['400', '700'],
 });
@@ -27,7 +32,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className={museoModerno.className}>{children}</body>
+      <body className={firaCode.className}>{children}</body>
     </html>
   )
 }

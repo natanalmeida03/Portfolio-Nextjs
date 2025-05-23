@@ -1,6 +1,7 @@
 'use client';
 import ProjectCard from "./ProjectCard";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 function useIsMobile() {
   const [isMobile, setIsMobile] = useState(false);
@@ -22,50 +23,50 @@ function Projects() {
       image: "/calculus.png",
       link: "https://github.com/fga-eps-mds/2024.1-CALCULUS-Frontend",
       linguagens: [
-        "ReactJs",
-        "NextJs",
+        "Reactjs",
+        "Nextjs",
         "Typescript",
-        "TailWindCSS",
+        "Tailwindcss",
       ],
     },
     {
       title: "Pokedex",
       image: "/pokedex.PNG",
       link: "https://github.com/NATANGOATOSO/Pokedex",
-      linguagens: ["JavaScript"],
+      linguagens: ["Javascript"],
     },
     {
       title: "Pixel Art App",
       image: "/pixelartsite.png",
       link: "https://github.com/NATANGOATOSO/pixelart-app",
-      linguagens: ["JavaScript"],
+      linguagens: ["Javascript"],
     },
     {
       title: "Chat App",
       image: "/chatapp.png",
       link: "",
-      linguagens: ["ReactJs", "Typescript", "Firebase"],
+      linguagens: ["Reactjs", "Typescript", "Firebase"],
     },
     {
-      title: "Cronometro Online",
+      title: "Stopwatch",
       image: "/timer.PNG",
       link: "https://github.com/NATANGOATOSO/cronometro/",
-      linguagens: ["JavaScript"],
+      linguagens: ["Javascript"],
     },
     {
       title: "Jokenpo",
       image: "/jokenpo.PNG",
       link: "https://github.com/NATANGOATOSO/pedrapapeltesoura",
-      linguagens: ["JavaScript"],
+      linguagens: ["Javascript"],
     },
     {
-      title: "Meu Portfólio",
+      title: "My personal website",
       image: "/portifolio.png",
       link: "https://natan.vercel.app",
-      linguagens: ["Typescript", "ReactJs", "NextJs"],
+      linguagens: ["Typescript", "Reactjs", "Nextjs", "Tailwindcss"],
     },
     {
-      title: "Bloom - APP de rotinas",
+      title: "Bloom - routines app",
       image: "/default.png",
       link: "https://github.com/cerejeiros/bloom",
       linguagens: ["Typescript", "React native", "Supabase"],
@@ -100,16 +101,16 @@ function Projects() {
   const visibleProjects = showAll ? filteredProjects : filteredProjects.slice(0, limit);
 
   return (
-    <section id="projects" className="pb-11 pt-20 bg-bk3">
+    <section id="projects" className="pb-11 pt-20 bg-bk3 dark:bg-bk1">
       <div className="mx-auto max-w-5xl">
-        <h1 className="font-bold text-4xl text-pk mb-10 pl-4 md:pr-0">
-          {'// projetos'}
-        </h1>
+      <Link href="#projects"><h1 className="font-bold text-4xl text-pk dark:text-white mb-10 pl-4 md:pr-0">
+          {'Projects'}
+        </h1></Link>
         <div className="mb-6 px-4">
           {allTools.map((tool) => (
             <span
               key={tool}
-              className={`hover:bg-bk4 inline-block bg-bk3 text-black rounded-md px-2 py-1 mr-2 mb-2 cursor-pointer ${
+              className={`hover:bg-bk4 inline-block bg-bk3 dark:bg-bk1 dark:hover:bg-bk2 text-black dark:text-white rounded-md px-2 py-1 mr-2 mb-2 cursor-pointer ${
                 selectedTool === tool ? "bg-bk4 font-semibold" : ""
               }`}
               onClick={() => {
@@ -138,10 +139,10 @@ function Projects() {
         {filteredProjects.length > limit && (
           <div className="flex justify-center mt-6">
             <button
-              className="bg-yll text-black px-4 py-2 rounded font-semibold hover:bg-yll/80 transition"
+              className="bg-bk3 text-pk dark:bg-bk1 dark:text-white dark:hover:bg-white dark:hover:text-bk1 border px-4 py-2 rounded font-semibold hover:bg-pk hover:text-bk3 transition"
               onClick={() => setShowAll((prev) => !prev)}
             >
-              {showAll ? "Mostrar menos" : "Mostrar mais"}
+              {showAll ? "Show less" : "Show more"}
             </button>
           </div>
         )}
