@@ -89,7 +89,7 @@ function NavBar() {
       </nav>
       {menuOpen ? (
         <div className="fixed h-screen w-64 bg-bk3 dark:bg-bk1 z-[-1] left-0 top-0 pt-14 pl-4">
-          <ul className="flex flex-1 flex-col justify-end gap-2 text-yll dark:bg-white ">
+          <ul className="flex flex-1 flex-col justify-end gap-2 text-yll dark:text-white ">
             <li className="py-1 text-3xl bold">
               <Link href="#about">Sobre mim</Link>
             </li>
