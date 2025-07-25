@@ -15,7 +15,7 @@ function Footer() {
         </a>
       </div>
       <div>
-        <p className="block"><a href="/me" className="text-black dark:text-white inline-flex items-center mt-6 px-4 py-2 bg-blue-600 rounded-xl hover:text-bk2 hover:dark:text-bk3"> See my personal blog <ArrowRight className="w-4 h-4 mr-2" /></a></p>
+        <p className="block"><a href="/me" className="text-black dark:text-white inline-flex items-center mt-6 px-4 py-2 bg-blue-600 rounded-xl hover:text-bk2 hover:dark:text-bk3"> See my personal blog <ArrowRight className="w-4 h-4 ml-2" /></a></p>
       </div>
       <br />
       <p className="text-black dark:text-white">© 2024 - presente</p>
