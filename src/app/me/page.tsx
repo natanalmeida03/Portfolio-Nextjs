@@ -2,7 +2,7 @@
 import React from 'react'
 import NavBar from '@/components/me/NavBar'
 import Posts from '@/components/me/Posts'
-import Footer from '@/components/Footer';
+import Footer from '@/components/me/Footer';
 
 function Me() {
     const [search, setSearch] = React.useState("");

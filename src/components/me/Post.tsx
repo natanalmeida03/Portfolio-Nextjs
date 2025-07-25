@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import { GrayMatterFile } from 'gray-matter';
+import { ArrowLeft } from "lucide-react";
 
 type PostProps = {
   post: GrayMatterFile<string>;
@@ -10,8 +11,14 @@ type PostProps = {
 
 function Post({ post }: PostProps) {
   return (
-    <section id="allPosts" className="min-h-[40vh] bg-bk4 pt-20 pb-24 dark:bg-bk2 md:pt-28">
-      <article className="max-w-3xl mx-auto px-6 pt-24 pb-16 bg-bk4 dark:bg-bk2 min-h-[40vh]">
+    <section id="allPosts" className="min-h-[40vh] bg-bk4 pb-24 dark:bg-bk2 pt-6 md:pt-10">
+      <article className="max-w-3xl mx-auto px-6 pb-4 bg-bk4 dark:bg-bk2 min-h-[40vh]">
+        <div>
+          <a href="/me" className="inline-flex items-center mb-6 pr-4 text-yll rounded-xl dark:text-bk4 ">
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Back
+          </a>
+        </div>
         <div className="prose dark:prose-invert max-w-none">
           <h1>{post.data.title}</h1>
           <p className="text-sm text-pk dark:text-bk4 ">

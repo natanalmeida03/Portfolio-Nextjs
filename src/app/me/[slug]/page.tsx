@@ -43,18 +43,19 @@ function PostPage({ params }: PostPageProps) {
   const post = getPostContent(params.slug);
   return (
     <>
-    <NavBar />
       {post ? (
           <Post post={post} />
       ) : (
-        <section id="allPosts" className="min-h-[40vh] bg-bk4 pt-20 pb-24 dark:bg-bk2 md:pt-28">
-          <div className="max-w-3xl mx-auto px-6 pt-24 pb-24 text-center text-bk1 dark:text-bk4 ">
-            Post not found. <br />
-            <Link href="/me" className='inline-flex items-center mt-6 px-4 py-2 text-bk1 dark:text-bk4 rounded-xl transition-colors'><ArrowLeft className="w-4 h-4 mr-2" /> Back to all posts.</Link>
-          </div>
-        </section>
+        <>
+          <section id="allPosts" className="min-h-[40vh] bg-bk4 pt-20 pb-24 dark:bg-bk2 md:pt-28">
+            <div className="max-w-3xl mx-auto px-6 pt-24 pb-24 text-center text-bk1 dark:text-bk4 ">
+              Post not found. <br />
+              <Link href="/me" className='inline-flex items-center mt-6 px-4 py-2 text-bk1 dark:text-bk4 rounded-xl transition-colors'><ArrowLeft className="w-4 h-4 mr-2" /> Back to all posts.</Link>
+            </div>
+          </section>
+          <Footer />
+        </>
       )}
-    <Footer />
     </>
   )
 }

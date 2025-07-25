@@ -48,14 +48,14 @@ function NavBar({ search, setSearch }: NavBarProps) {
               className="px-4 py-1 rounded border border-yll hidden md:block lg:block dark:border-white bg-bk4 dark:bg-bk2 text-yll dark:text-white w-72"
             />
           )}
-          <ul className="hidden md:flex gap-2 text-yll dark:text-white ">
+          {/* <ul className="hidden md:flex gap-2 text-yll dark:text-white ">
             <li className="mx-5 py-1 relative group overflow-hidden">
               <Link href="/me" className="relative z-10 font-semibold">
                 Blog
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-y transition-all duration-300 group-hover:w-full"></span>
               </Link>
             </li>
-          </ul>
+          </ul> */}
           <button
             onClick={toggleTheme}
             className="ml-4 p-2 rounded hover:bg-bk4 dark:hover:bg-bk2 transition-colors"
@@ -67,7 +67,7 @@ function NavBar({ search, setSearch }: NavBarProps) {
               <Moon className="w-6 h-6 text-yll" />
             )}
           </button>
-          <div className="block md:hidden pr-4">
+          {/* <div className="block md:hidden pr-4">
             {menuOpen ? (
               <Image
                 src="/close.png"
@@ -85,7 +85,7 @@ function NavBar({ search, setSearch }: NavBarProps) {
                 onClick={toggleMenu}
               />
             )}
-          </div>
+          </div> */}
         </div>
       </nav>
       {menuOpen ? (
