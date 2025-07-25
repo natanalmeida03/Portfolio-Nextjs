@@ -1,7 +1,7 @@
 ---
 title: "First post"
-date: "2025-07-23"
-update: "2025-07-24"
+date: "July 23, 2025"
+update: "July 24, 2025"
 ---
 
 # Hi

@@ -1,8 +1,8 @@
 ---
 title: "Why I'm starting a blog"
 author: "Natan Almeida"
-date: "2025-07-24"
-update: "2025-07-24"
+date: "July 24, 2025"
+update: "July 24, 2025"
 ---
 
 
