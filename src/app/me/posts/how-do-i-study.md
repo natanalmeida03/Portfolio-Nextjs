@@ -12,7 +12,11 @@ The tool I've used most in my studies is Obsidian. It allows me to connect notes
 
 I've seen a lot of videos about it, but I think the main one and the one that helped me the most was the one on the Paiva channel.
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=un4Pbihif2Y&ab_channel=Paiva" frameborder="0" allowfullscreen></iframe>
+<a href="https://www.youtube.com/watch?v=un4Pbihif2Y&ab_channel=Paiva" target="_blank">
+<img src="https://img.youtube.com/vi/un4Pbihif2Y/maxresdefault.jpg" alt="Assista no YouTube">
+</a>
+
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/watch?v=un4Pbihif2Y&ab_channel=Paiva" frameborder="0" allowfullscreen></iframe> -->
 
 
 ## Organization
