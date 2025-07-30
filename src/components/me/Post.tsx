@@ -1,11 +1,11 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import readingTime from 'reading-time';
 import { GrayMatterFile } from 'gray-matter';
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Share } from "lucide-react";
 import { useRouter } from 'next/navigation';
 
 type PostProps = {
@@ -14,6 +14,7 @@ type PostProps = {
 
 function Post({ post }: PostProps) {
   const router = useRouter();
+  const [copied, setCopied] = useState(false);
   const time = readingTime(post.content);
   const readTime = `${Math.ceil(time.minutes)} min read`;
 
@@ -50,9 +51,46 @@ function Post({ post }: PostProps) {
             {post.content}
           </ReactMarkdown>
 
-          <p className='text-sm text-pk dark:text-bk4 mt-16 font-semibold text-right'>
+          {/* <p className='text-sm text-pk dark:text-bk4 mt-16 font-semibold text-right'>
             {post.data.author && `Written by ${post.data.author}.`}
-          </p>
+          </p> */}
+        </div>
+        <hr className='my-6 text-yll/40 dark:text-bk4/40' />
+        <div className="flex items-center gap-2 flex-wrap">
+          {Array.isArray(post.data.tags) && post.data.tags.length > 0 && (
+            post.data.tags.map((tag: string) => (
+              <span
+                key={tag}
+                className="px-2 py-0.5 rounded bg-y/80 text-xs font-bold text-white"
+              >
+                {tag}
+              </span>
+            ))
+          )}
+          {copied ? (
+            <span className="ml-auto text-xs text-pk dark:text-bk4 animate-fade-in">Copied!</span>
+          ) : (
+            <button
+              type="button"
+              className="ml-auto p-2 transition"
+              title="share"
+              aria-label="Share"
+              onClick={() => {
+                if (navigator.share) {
+                  navigator.share({
+                    title: post.data.title,
+                    url: window.location.href,
+                  });
+                } else {
+                  navigator.clipboard.writeText(window.location.href);
+                  setCopied(true);
+                  setTimeout(() => setCopied(false), 1500);
+                }
+              }}
+            >
+              <Share className="w-5 h-5 text-yll dark:text-bk4" />
+            </button>
+          )}
         </div>
       </article>
     </section>
