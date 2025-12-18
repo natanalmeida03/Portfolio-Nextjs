@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function Know() {
   return (
-    <section id="know" className="pb-11 pt-20 bg-bk4 dark:bg-bk2">
+    <section id="know" className="pb-11 pt-20 bg-bk3 dark:bg-bk1">
       <div className="mx-auto max-w-5xl">
       <Link href="#know"><h1 className="font-bold text-4xl text-pk dark:text-white mb-10 pl-4 md:pr-0">{'Skills'}</h1></Link>
         <ul className="flex flex-wrap gap-4 md:gap-10 justify-center items-center">

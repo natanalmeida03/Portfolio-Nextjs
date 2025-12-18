@@ -101,7 +101,7 @@ function Projects() {
   const visibleProjects = showAll ? filteredProjects : filteredProjects.slice(0, limit);
 
   return (
-    <section id="projects" className="pb-11 pt-20 bg-bk3 dark:bg-bk1">
+    <section id="projects" className="pb-11 pt-20 bg-bk4 dark:bg-bk2">
       <div className="mx-auto max-w-5xl">
       <Link href="#projects"><h1 className="font-bold text-4xl text-pk dark:text-white mb-10 pl-4 md:pr-0">
           {'Projects'}
@@ -110,7 +110,7 @@ function Projects() {
           {allTools.map((tool) => (
             <span
               key={tool}
-              className={`hover:bg-bk4 inline-block bg-bk3 dark:bg-bk1 dark:hover:bg-bk2 text-black dark:text-white rounded-md px-2 py-1 mr-2 mb-2 cursor-pointer ${
+              className={`hover:bg-bk4 inline-block bg-bk4 dark:bg-bk2 dark:hover:bg-bk2 text-black dark:text-white rounded-md px-2 py-1 mr-2 mb-2 cursor-pointer ${
                 selectedTool === tool ? "bg-bk4 font-semibold" : ""
               }`}
               onClick={() => {
@@ -139,7 +139,7 @@ function Projects() {
         {filteredProjects.length > limit && (
           <div className="flex justify-center mt-6">
             <button
-              className="bg-bk3 text-pk dark:bg-bk1 dark:text-white dark:hover:bg-white dark:hover:text-bk1 border px-4 py-2 rounded font-semibold hover:bg-pk hover:text-bk3 transition"
+              className="bg-bk4 text-pk dark:bg-bk2 dark:text-white dark:hover:bg-white dark:hover:text-bk2 border px-4 py-2 rounded font-semibold hover:bg-pk hover:text-bk4 transition"
               onClick={() => setShowAll((prev) => !prev)}
             >
               {showAll ? "Show less" : "Show more"}

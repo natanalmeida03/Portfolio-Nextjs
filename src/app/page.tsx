@@ -1,5 +1,6 @@
 import About from '@/components/About';
 import Footer from '@/components/Footer';
+import Job from '@/components/Job';
 import Know from '@/components/Know';
 import Natan from '@/components/Natan';
 import NavBar from '@/components/NavBar';
@@ -12,6 +13,7 @@ function Home() {
             <NavBar />
             <Natan />
             <About />
+            <Job />
             <Projects />
             <Know />
             <Footer />

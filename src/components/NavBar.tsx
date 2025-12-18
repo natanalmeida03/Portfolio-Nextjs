@@ -43,6 +43,12 @@ function NavBar() {
             </Link>
           </li>
           <li className="mx-5 py-1 relative group overflow-hidden">
+            <Link href="#career" className="relative z-10 font-semibold">
+              Career
+              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-y transition-all duration-300 group-hover:w-full"></span>
+            </Link>
+          </li>
+          <li className="mx-5 py-1 relative group overflow-hidden">
             <Link href="#projects" className="relative z-10 font-semibold ">
               Projects
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-y transition-all duration-300 group-hover:w-full"></span>
@@ -54,8 +60,8 @@ function NavBar() {
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-y transition-all duration-300 group-hover:w-full"></span>
             </Link>
           </li>
+
         </ul>
-        {/* Botão de tema */}
         <button
           onClick={toggleTheme}
           className="ml-4 p-2 rounded hover:bg-bk4 dark:hover:bg-bk2 transition-colors"
@@ -91,13 +97,16 @@ function NavBar() {
         <div className="fixed h-screen w-64 bg-bk3 dark:bg-bk1 z-[-1] left-0 top-0 pt-14 pl-4">
           <ul className="flex flex-1 flex-col justify-end gap-2 text-yll dark:text-white ">
             <li className="py-1 text-3xl bold">
-              <Link href="#about">Sobre mim</Link>
+              <Link href="#about">About</Link>
             </li>
             <li className="py-1 text-3xl bold">
-              <Link href="#projects">projetos</Link>
+              <Link href="#career">Career</Link>
             </li>
             <li className="py-1 text-3xl bold">
-              <Link href="#know">conhecimentos</Link>
+              <Link href="#projects">Projects</Link>
+            </li>
+            <li className="py-1 text-3xl bold">
+              <Link href="#know">Skills</Link>
             </li>
           </ul>
         </div>
