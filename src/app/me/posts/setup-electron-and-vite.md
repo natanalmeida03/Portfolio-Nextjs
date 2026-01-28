@@ -67,18 +67,19 @@ my-app
     - ...
 ```
 
-in `tsconfig.json`, put the typescript settings
+in `electron/tsconfig.json`, put the typescript settings
 
 ```json
 {
   "compilerOptions": {
     "target": "ES2020",
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
+    "module": "ES2020",
+    "moduleResolution": "Node",
     "outDir": "../dist-electron",
     "rootDir": "./",
     "esModuleInterop": true,
     "strict": true,
+    "skipLibCheck": true,
     "types": ["node"]
   },
   "include": ["./**/*.ts"]
@@ -168,7 +169,7 @@ And change the scripts section to:
 
   "electron": "wait-on http://localhost:5173 && electron .",
   "dev:electron": "cross-env NODE_ENV=development concurrently \"npm run dev\" \"npm run electron\""
-}
+},
 ```
 
 ## Running
@@ -176,6 +177,7 @@ And change the scripts section to:
 Now that everything is configured, run the following command to execute the application.
 
 ```bash
+npm run build:all
 npm run dev:electron
 ```
 
