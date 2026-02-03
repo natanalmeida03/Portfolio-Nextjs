@@ -30,6 +30,17 @@ function Projects() {
       ],
     },
     {
+      title: "natan.sh",
+      image: "/natan-sh.png",
+      link: "https://natan.sh",
+      linguagens: [
+        "Supabase",
+        "Nextjs",
+        "Typescript",
+        "Tailwindcss",
+      ],
+    },
+    {
       title: "Pokedex",
       image: "/pokedex.PNG",
       link: "https://github.com/NATANGOATOSO/Pokedex",
